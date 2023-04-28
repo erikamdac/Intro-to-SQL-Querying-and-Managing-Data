@@ -1,3 +1,7 @@
+/* We've created a database for a friend networking site, with a table storing data on each person, a table on each person's hobbies, 
+and a table of friend connections between the people. In this first step, use a JOIN to display a table showing people's names with 
+their hobbies.*/
+
 CREATE TABLE persons (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     fullname TEXT,
@@ -39,6 +43,8 @@ SELECT persons.fullname, hobbies.name
 FROM persons
 JOIN hobbies
 ON persons.id = hobbies.person_id;
+
+/*Now, use another SELECT with a JOIN to show the names of each pair of friends, based on the data in the friends table.*/
 
 SELECT a.fullname, b.fullname
 FROM friends
